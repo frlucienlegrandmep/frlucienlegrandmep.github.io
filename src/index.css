@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cinzel", Georgia, "Times New Roman", serif;
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: #2A1E15;
+    background-color: #1A120C;
+    font-family: var(--font-serif);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom archival bookmark range scrubber */
+input[type="range"].archival-scrubber {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].archival-scrubber::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #8A3B1B 0%, #C27B38 50%, #D9C8AE 100%);
+  border: 1px solid rgba(92, 61, 36, 0.25);
+}
+
+input[type="range"].archival-scrubber::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  margin-top: -9px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 35%, #F2C97D, #9A411A 80%);
+  border: 2px solid #FBF6EC;
+  box-shadow: 0 2px 6px rgba(28, 18, 10, 0.45);
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].archival-scrubber:hover::-webkit-slider-thumb,
+input[type="range"].archival-scrubber:focus-visible::-webkit-slider-thumb {
+  transform: scale(1.12);
+}
+
+input[type="range"].archival-scrubber::-moz-range-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #8A3B1B 0%, #C27B38 50%, #D9C8AE 100%);
+  border: 1px solid rgba(92, 61, 36, 0.25);
+}
+
+input[type="range"].archival-scrubber::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 35%, #F2C97D, #9A411A 80%);
+  border: 2px solid #FBF6EC;
+  box-shadow: 0 2px 6px rgba(28, 18, 10, 0.45);
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/*
+ * StPageFlip Structural Fixes:
+ * StPageFlip's bundled stylesheet has a typo (`.sft__wrapper`), leaving `.stf__wrapper`
+ * without `position: relative; width: 100%;`. Restoring those rules here ensures
+ * `.stf__block` and `.stf__item` clip-paths, shadows, and 3D flips render cleanly.
+ * Note: `.stf__item` must retain StPageFlip's own inline `position: absolute`,
+ * `display`, `width`, `height`, and `transform` properties.
+ */
+.stf__parent {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+  transform: translateZ(0);
+  touch-action: pan-y;
+}
+
+.stf__wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.stf__block {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  perspective: 2000px;
+}
+
+.stf__item {
+  display: none;
+  position: absolute;
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+  background-color: #EFE3CE;
+}
+
+/* Inner page surface kept strictly inside `.stf__item` so it never overrides `.stf__item` positioning */
+.archival-page-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #EFE3CE;
+  user-select: none;
+  box-shadow: inset 0 0 26px rgba(74, 48, 24, 0.14);
+}
+
+.archival-page-inner--left::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to left, rgba(42, 26, 14, 0.18) 0%, rgba(42, 26, 14, 0.04) 6%, transparent 18%);
+}
+
+.archival-page-inner--right::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to right, rgba(42, 26, 14, 0.18) 0%, rgba(42, 26, 14, 0.04) 6%, transparent 18%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
