@@ -39,3 +39,29 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Notify Google Indexing API
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: |
+          npm install googleapis --no-save
+          node -e '
+            const { google } = require("googleapis");
+            async function indexUrl() {
+              const credentials = JSON.parse(process.env.GSC_SERVICE_ACCOUNT_JSON);
+              const auth = new google.auth.JWT(
+                credentials.client_email,
+                null,
+                credentials.private_key,
+                ["https://www.googleapis.com/auth/indexing"]
+              );
+              const indexing = google.indexing({ version: "v3", auth });
+              const res = await indexing.urlNotifications.publish({
+                requestBody: {
+                  url: "https://frlucienlegrandmep.github.io/",
+                  type: "URL_UPDATED"
+                }
+              });
+              console.log("Google Indexing API Response:", res.data);
+            }
+            indexUrl().catch(err => { console.error(err); process.exit(1); });
+          '
