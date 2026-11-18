@@ -73,7 +73,7 @@ export const BOOK_1_PAGES: BookPage[] = Array.from({ length: 165 }, (_, i) => {
   return {
     id: `b1-p${pageNum}`,
     pageNumber: pageNum,
-    imageUrl: `/book1/page-${paddedNum}.webp`,
+    imageUrl: `${import.meta.env.BASE_URL}book1/page-${paddedNum}.webp`,
     alt: `Volume I - Page ${pageNum}`,
     isHardCover: pageNum === 1 || pageNum === 165, // Keeps the thick cover physics for first/last page
   };
@@ -87,7 +87,7 @@ export const BOOK_2_PAGES: BookPage[] = Array.from({ length: 165 }, (_, i) => {
   return {
     id: `b2-p${pageNum}`,
     pageNumber: pageNum,
-    imageUrl: `/book2/page-${paddedNum}.webp`,
+    imageUrl: `${import.meta.env.BASE_URL}book2/page-${paddedNum}.webp`,
     alt: `Volume II - Page ${pageNum}`,
     isHardCover: pageNum === 1 || pageNum === 165,
   };
