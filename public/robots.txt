@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://frlucienlegrandmep.github.io/sitemap.xml
