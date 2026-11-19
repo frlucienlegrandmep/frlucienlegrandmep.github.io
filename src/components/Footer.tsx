@@ -13,12 +13,12 @@ export const Footer: React.FC = () => {
           className="text-sm sm:text-base font-semibold tracking-[0.08em] text-[#3A2516]"
           style={{ fontFamily: 'var(--font-display)' }}
         >
-          Prof. Dr. Lucien Legrand Centenary Archive
+          Prof. Dr Lucien Legrand Centenary Archive
         </p>
 
         {/* Physical Address & Archival Location */}
         <p className="text-sm sm:text-base text-[#5C412B]">
-          St. Peter’s Pontifical Seminary Archive · Malleswaram West, Bengaluru 560055, India
+          St Peter’s Pontifical Seminary & Institute · Malleswaram West, Bengaluru 560055, India
         </p>
 
         {/* Copyright & Designer Credit Line
