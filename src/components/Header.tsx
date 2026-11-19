@@ -38,7 +38,7 @@ export const Header: React.FC = () => {
           >
             Prof. Dr. Lucien Legrand
           </h1>
-          <p className="hidden sm:block text-xs tracking-[0.18em] uppercase text-[#D8B47C] mt-0.5 truncate">
+          <p className="hidden sm:block text-xs tracking-[0.18em] uppercase text-[#D8B47C] mt-0.5 whitespace-nowrap">
             A Missionary’s journey to the Biblical Lands. 1950 - 1952
           </p>
         </div>
