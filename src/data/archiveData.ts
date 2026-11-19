@@ -53,14 +53,14 @@ export interface BookArchive {
 export const BACKGROUND_IMAGE_URL: string = pilgrimageBackdrop;
 
 export const AUTHOR_INFO = {
-  name: 'Prof. Dr. Lucien Legrand',
-  honorific: 'M.E.P. · Centenary Tribute (1926 – 2026)',
+  name: 'Prof. Dr Lucien Legrand',
+  honorific: '',
   photoUrl: scholarPortrait,
-  photoAlt: 'Portrait of Prof. Dr. Lucien Legrand seated in a sunlit seminary library surrounded by biblical manuscripts',
+  photoAlt: 'Portrait of Prof. Dr Lucien Legrand seated in a sunlit seminary library surrounded by biblical manuscripts',
   shortBio: [
-    'Born in France in 1926 and ordained a priest of the Paris Foreign Missions Society (M.E.P.), Prof. Dr. Lucien Legrand dedicated more than seven decades to biblical exegesis, priestly formation, and cross-cultural theological dialogue in India.',
+    'Born in France in 1926 and ordained a priest of the Paris Foreign Missions Society (M.E.P.), Prof. Dr Lucien Legrand dedicated more than seven decades to biblical exegesis, priestly formation, and cross-cultural theological dialogue in India.',
     'Serving for generations at St. Peter’s Pontifical Institute in Bengaluru, he illuminated the Scriptures through seminal works on the Infancy Narratives, the Letters of St. Paul, and the biblical foundations of mission—always uniting rigorous philological scholarship with pastoral warmth.',
-    'This digital storybook archive commemorates his 100th birthday, preserving two commemorative volumes of memories, illustrated journeys, and reflections gathered by colleagues, former students, and friends across the world.',
+    'This digital storybook archive commemorates his 100th birthday, preserving two commemorative volumes of memories, illustrated journeys, and reflections to the Biblical Lands. ',
   ],
   quote: '“The Word is never a relic of stone alone; it is a living road walked together across languages, centuries, and hearts.”',
 };
