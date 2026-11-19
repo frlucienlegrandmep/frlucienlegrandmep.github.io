@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
         </div>
 
         {/* CENTER ZONE: Main Title of the Website */}
-        <div className="text-center min-w-0 px-1">
+        <div className="flex flex-col items-center text-center text-center min-w-0 px-1">
           <h1
             className="text-sm sm:text-xl md:text-2xl font-semibold tracking-[0.06em] text-[#FBF4E6] leading-tight whitespace-nowrap"
             style={{ fontFamily: 'var(--font-display)' }}
