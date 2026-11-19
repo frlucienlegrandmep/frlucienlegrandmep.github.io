@@ -36,7 +36,7 @@ export const Header: React.FC = () => {
             className="text-sm sm:text-xl md:text-2xl font-semibold tracking-[0.06em] text-[#FBF4E6] leading-tight whitespace-nowrap"
             style={{ fontFamily: 'var(--font-display)' }}
           >
-            Prof. Dr. Lucien Legrand
+            Prof. Dr Lucien Legrand
           </h1>
           <p className="hidden sm:block text-xs tracking-[0.18em] uppercase text-[#D8B47C] mt-0.5 whitespace-nowrap">
             A Missionary’s journey to the Biblical Lands. 1950 - 1952
