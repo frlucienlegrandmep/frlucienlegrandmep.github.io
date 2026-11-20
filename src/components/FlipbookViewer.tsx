@@ -756,7 +756,7 @@ export const FlipbookViewer: React.FC<FlipbookViewerProps> = ({
         </button>
 
         {/* Measurement Wrapper + Scrollable/Pannable Zoom Viewport */}
-        <div ref={stageMeasureRef} className="relative w-full">
+        <div ref={stageMeasureRef} onContextMenu={(e) => e.preventDefault()} className="relative w-full">
           <div
             ref={zoomViewportRef}
             onPointerDown={handlePanPointerDown}
