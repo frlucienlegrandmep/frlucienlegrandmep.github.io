@@ -200,6 +200,8 @@ export const FlipbookViewer: React.FC<FlipbookViewerProps> = ({
     img.alt = page.alt;
     img.referrerPolicy = 'no-referrer';
     img.draggable = false;
+    img.oncontextmenu = (e) => e.preventDefault();
+    img.style.setProperty('-webkit-touch-callout', 'none');
     img.className = 'w-full h-full object-contain bg-[#F6EFE2] block select-none';
 
     img.onerror = () => {
