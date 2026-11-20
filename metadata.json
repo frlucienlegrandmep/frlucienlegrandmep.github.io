@@ -1,6 +1,6 @@
 {
-  "name": "Prof. Dr. Lucien Legrand — Centenary Archive",
-  "description": "A digital storybook archive celebrating the 100th birthday of priest and biblical scholar Prof. Dr. Lucien Legrand.",
+  "name": "Prof. Dr. Lucien Legrand — Footsteps in Antiquity",
+  "description": "A Missionary’s journey to the Biblical Lands. A digital storybook archive celebrating the 100th birthday of priest and biblical scholar Prof. Dr. Lucien Legrand.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
