@@ -179,6 +179,21 @@ export const FlipbookViewer: React.FC<FlipbookViewerProps> = ({
     };
   }, [isFallbackFullscreen]);
 
+  // Block right-click in both Single Page and Spread modes (capture phase)
+  useEffect(() => {
+    const stage = stageMeasureRef.current;
+    if (!stage) return;
+
+    const blockContextMenu = (e: MouseEvent) => {
+      e.preventDefault();
+    };
+
+    stage.addEventListener('contextmenu', blockContextMenu, { capture: true });
+    return () => {
+      stage.removeEventListener('contextmenu', blockContextMenu, { capture: true });
+    };
+  }, []);
+
   /**
    * Build each page element outside React reconciliation so StPageFlip
    * controls `.stf__item` without DOM conflicts. Uses `object-contain`
