@@ -139,6 +139,12 @@ input[type="range"].archival-scrubber::-moz-range-thumb {
   background: linear-gradient(to right, rgba(42, 26, 14, 0.18) 0%, rgba(42, 26, 14, 0.04) 6%, transparent 18%);
 }
 
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
