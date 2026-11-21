@@ -97,7 +97,7 @@ export const BOOK_2_PAGES: BookPage[] = Array.from({ length: 165 }, (_, i) => {
 export const BOOKS_DATA: Record<BookKey, BookArchive> = {
   book1: {
     key: 'book1',
-    tabLabel: 'Book 1',
+    tabLabel: 'Volume 1',
     title: 'Footsteps in Antiquity: Jerusalem',
     subtitle: 'Volume I · Jerusalem',
     yearSpan: '',
@@ -107,7 +107,7 @@ export const BOOKS_DATA: Record<BookKey, BookArchive> = {
   },
   book2: {
     key: 'book2',
-    tabLabel: 'Book 2',
+    tabLabel: 'Volume 2',
     title: 'Footsteps in Antiquity: Trans-Jordan',
     subtitle: 'Volume II · Trans-Jordan',
     yearSpan: '',
