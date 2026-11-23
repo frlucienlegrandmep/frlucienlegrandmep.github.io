@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prof. Dr. Lucien Legrand — Footsteps in Antiquity</title>
+    <title>Footsteps in Antiquity — Prof. Dr Lucien Legrand | Digital eBook</title>
     <meta name="description" content="A Missionary’s journey to the Biblical Lands. A digital storybook archive celebrating the 100th birthday of priest and biblical scholar Prof. Dr. Lucien Legrand." />
-    <meta property="og:title" content="Prof. Dr. Lucien Legrand — Footsteps in Antiquity" />
+    <meta property="og:title" content="Footsteps in Antiquity — Prof. Dr Lucien Legrand | Digital eBook" />
     <meta property="og:description" content="A Missionary’s journey to the Biblical Lands. A digital storybook archive celebrating the 100th birthday of priest and biblical scholar Prof. Dr. Lucien Legrand." />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://frlucienlegrandmep.github.io/" />
+    <meta property="og:image" content="https://frlucienlegrandmep.github.io/book1/page-001.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,16 +19,44 @@
       rel="stylesheet"
     />
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Fr. Lucien Legrand",
-  "honorificPrefix": "Fr.",
-  "honorificSuffix": "MEP",
-  "jobTitle": "Missionary and Scholar",
-  "description": "Footsteps in Antiquity - A Missionary journey of Fr. Lucien Legrand MEP to the Biblical Lands in interactive digital flipbook.",
-  "url": "https://frlucienlegrandmep.github.io/"
-}
+      {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://frlucienlegrandmep.github.io/#website",
+          "url": "https://frlucienlegrandmep.github.io/",
+          "name": "Footsteps in Antiquity — Prof. Dr. Lucien Legrand",
+          "description": "Interactive digital flipbook archive celebrating the 100th birthday of Prof. Dr. Lucien Legrand MEP."
+        },
+        {
+          "@type": "Book",
+          "@id": "https://frlucienlegrandmep.github.io/#book",
+          "name": "Footsteps in Antiquity: A Missionary's Journey to the Biblical Lands",
+          "alternateName": ["Footsteps in Antiquity: Jerusalem", "Footsteps in Antiquity: Trans-Jordan"],
+          "bookFormat": "https://schema.org/EBook",
+          "url": "https://frlucienlegrandmep.github.io/",
+          "image": "https://frlucienlegrandmep.github.io/book1/page-001.webp",
+          "author": {
+            "@id": "https://frlucienlegrandmep.github.io/#person"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://frlucienlegrandmep.github.io/#person",
+          "name": "Prof. Dr. Lucien Legrand",
+          "alternateName": ["Fr. Lucien Legrand", "Fr. Lucien Legrand MEP", "Lucien Legrand"],
+          "honorificPrefix": "Prof. Dr.",
+          "honorificSuffix": "MEP",
+          "jobTitle": "Biblical Scholar and Missionary",
+          "affiliation": {
+            "@type": "Organization",
+            "name": "St. Peter's Pontifical Institute, Bengaluru"
+          },
+          "url": "https://frlucienlegrandmep.github.io/"
+          }
+        ]
+      }
 </script>
   </head>
   <body>
