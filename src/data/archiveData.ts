@@ -66,7 +66,7 @@ export const AUTHOR_INFO = {
 };
 
 
-export const BOOK_1_PAGES: BookPage[] = Array.from({ length: 165 }, (_, i) => {
+export const BOOK_1_PAGES: BookPage[] = Array.from({ length: 160 }, (_, i) => {
   const pageNum = i + 1;
   const paddedNum = String(pageNum).padStart(3, '0'); 
   
@@ -80,7 +80,7 @@ export const BOOK_1_PAGES: BookPage[] = Array.from({ length: 165 }, (_, i) => {
 });
 
 // Auto-generate 160 pages for Volume II from the public/book2 folder
-export const BOOK_2_PAGES: BookPage[] = Array.from({ length: 165 }, (_, i) => {
+export const BOOK_2_PAGES: BookPage[] = Array.from({ length: 167 }, (_, i) => {
   const pageNum = i + 1;
   const paddedNum = String(pageNum).padStart(3, '0'); 
   
